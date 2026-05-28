@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node quickstart.mjs"
+  }
+}
