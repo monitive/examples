@@ -1,0 +1,20 @@
+name: Deploy and Assert Healthy
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy
+        run: ./deploy.sh
+
+      - name: Assert monitor healthy
+        uses: uptimemonitoring/assert-healthy@v1
+        with:
+          api-key: ${{ secrets.UPTIMEMONITORING_ASSERT_HEALTHY_KEY }}
+          monitor-ids: ${{ vars.UPTIMEMONITORING_MONITOR_ID }}

@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "uptimemonitoring": {
+      "url": "https://api.uptimemonitoring.com/mcp",
+      "headers": {
+        "Authorization": "Bearer umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+      }
+    }
+  }
+}
