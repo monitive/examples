@@ -38,14 +38,14 @@ echo "  Found $COUNT monitor(s)"
 echo "Fetching monitor state..."
 STATE=$(curl -s --fail-with-body "$BASE/monitors/$MONITOR_ID" \
   -H "Authorization: Bearer $KEY")
-STATUS=$(echo "$STATE" | jq -r '.state.status // .state // "unknown"')
+STATUS=$(echo "$STATE" | jq -r '.state.status? // .state // "unknown"')
 echo "  State: $STATUS"
 
 # ── 4. Run test ──────────────────────────────────────────────────────────────
 echo "Running test..."
 TEST=$(curl -s --fail-with-body -X POST "$BASE/monitors/$MONITOR_ID/test" \
   -H "Authorization: Bearer $KEY")
-TEST_STATE=$(echo "$TEST" | jq -r '.state.status // .state // "unknown"')
+TEST_STATE=$(echo "$TEST" | jq -r '.state.status? // .state // "unknown"')
 echo "  Test result: $TEST_STATE"
 
 # ── 5. Delete monitor ────────────────────────────────────────────────────────
