@@ -3,8 +3,8 @@
 # Prerequisites: curl, jq
 set -euo pipefail
 
-BASE="https://api.uptimemonitoring.com/api/v1"
-KEY="${UPTIMEMONITORING_API_KEY:?UPTIMEMONITORING_API_KEY is not set}"
+BASE="https://api.monitive.com/api/v1"
+KEY="${MONITIVE_API_KEY:?MONITIVE_API_KEY is not set}"
 
 # Replace 123 with your actual monitor ID (find it in the dashboard URL).
 MONITOR_ID="${1:-123}"
@@ -30,4 +30,4 @@ echo "  Signing secret: $SECRET"
 echo ""
 echo "Store the signing secret (whs_live_…) somewhere safe — you'll need it to"
 echo "verify the HMAC-SHA256 signature on incoming deliveries."
-echo "UptimeMonitoring sends the signature in the X-UptimeMonitoring-Signature header."
+echo "Monitive sends the signature in the X-UptimeMonitoring-Signature header."

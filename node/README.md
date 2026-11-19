@@ -5,21 +5,21 @@ Run the full monitor lifecycle — create, list, fetch state, test, delete — u
 ## Prerequisites
 
 - Node.js 20 or later (`node --version`)
-- An [UptimeMonitoring API key](https://uptimemonitoring.com/settings/api-keys) (`umk_live_…` or `umk_test_…`)
+- A [Monitive API key](https://my.monitive.com/keys) (`mk_live_…`)
 
 No dependencies to install — uses native `fetch` from Node 20+.
 
 ## How to run
 
 ```sh
-export UPTIMEMONITORING_API_KEY=umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export MONITIVE_API_KEY=mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 node quickstart.mjs
 ```
 
 Or via npm:
 
 ```sh
-export UPTIMEMONITORING_API_KEY=umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export MONITIVE_API_KEY=mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 npm start
 ```
 

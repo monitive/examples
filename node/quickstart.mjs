@@ -1,9 +1,9 @@
 // Node 20+ required (uses built-in fetch, no dependencies)
-const BASE = 'https://api.uptimemonitoring.com/api/v1';
-const KEY = process.env.UPTIMEMONITORING_API_KEY;
+const BASE = 'https://api.monitive.com/api/v1';
+const KEY = process.env.MONITIVE_API_KEY;
 
 if (!KEY) {
-  console.error('UPTIMEMONITORING_API_KEY is not set');
+  console.error('MONITIVE_API_KEY is not set');
   process.exit(1);
 }
 

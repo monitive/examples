@@ -1,16 +1,16 @@
 # MCP — Claude Code
 
-Connect UptimeMonitoring to Claude Code and manage your monitors with natural language.
+Connect Monitive to Claude Code and manage your monitors with natural language.
 
 ## Connect
 
 ```sh
-claude mcp add --transport http uptimemonitoring https://api.uptimemonitoring.com/mcp \
-  --header "Authorization: Bearer umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+claude mcp add --transport http monitive https://api.monitive.com/mcp \
+  --header "Authorization: Bearer mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 ```
 
-Replace `umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` with your API key from
-[uptimemonitoring.com/settings/api-keys](https://uptimemonitoring.com/settings/api-keys).
+Replace `mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` with your API key from
+[my.monitive.com/keys](https://my.monitive.com/keys).
 
 ## Verify
 
@@ -20,12 +20,12 @@ After adding, confirm the server is reachable:
 /mcp
 ```
 
-You should see `uptimemonitoring` listed with a green status.
+You should see `monitive` listed with a green status.
 
 ## OAuth alternative
 
-If you prefer not to embed your API key, UptimeMonitoring MCP supports OAuth. Open
-`https://api.uptimemonitoring.com/mcp` in your browser to start the authorization flow,
+If you prefer not to embed your API key, Monitive MCP supports OAuth. Open
+`https://api.monitive.com/mcp` in your browser to start the authorization flow,
 then re-run the `claude mcp add` command without the `--header` flag.
 
 ## Usage
@@ -54,8 +54,8 @@ Claude will call the MCP tools and return the results inline.
 
 | Symptom | Fix |
 |---------|-----|
-| `uptimemonitoring` not listed in `/mcp` | Check the endpoint is `api.uptimemonitoring.com/mcp` (not `mcp.uptimemonitoring.com`) |
-| 401 Unauthorized | Verify the key starts with `umk_live_` or `umk_test_` and is not expired |
+| `monitive` not listed in `/mcp` | Check the endpoint is `api.monitive.com/mcp` (not `mcp.monitive.com`) |
+| 401 Unauthorized | Verify the key starts with `mk_live_` (or `umk_live_` for a key created before 17 November 2026) and is not expired |
 | Tools not available | Restart Claude Code after adding the server |
 
 ## Next steps

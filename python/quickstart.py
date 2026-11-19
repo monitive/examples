@@ -4,11 +4,11 @@ import time
 
 import requests
 
-BASE = "https://api.uptimemonitoring.com/api/v1"
-KEY = os.environ.get("UPTIMEMONITORING_API_KEY")
+BASE = "https://api.monitive.com/api/v1"
+KEY = os.environ.get("MONITIVE_API_KEY")
 
 if not KEY:
-    print("UPTIMEMONITORING_API_KEY is not set", file=sys.stderr)
+    print("MONITIVE_API_KEY is not set", file=sys.stderr)
     sys.exit(1)
 
 HEADERS = {"Authorization": f"Bearer {KEY}"}
