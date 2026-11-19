@@ -2,8 +2,8 @@
 # Prerequisites: curl 7.76+, jq
 set -euo pipefail
 
-BASE="https://api.uptimemonitoring.com/api/v1"
-KEY="${UPTIMEMONITORING_API_KEY:?UPTIMEMONITORING_API_KEY is not set}"
+BASE="https://api.monitive.com/api/v1"
+KEY="${MONITIVE_API_KEY:?MONITIVE_API_KEY is not set}"
 TIMESTAMP=$(date +%s)
 MONITOR_URL="https://example.com/?um_examples_run=${TIMESTAMP}"
 MONITOR_NAME="examples-repo-smoke-test-${TIMESTAMP}"

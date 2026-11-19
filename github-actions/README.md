@@ -1,10 +1,10 @@
 # GitHub Actions — Post-Deploy Health Gate
 
-Assert that your UptimeMonitoring monitor is healthy after every deployment to `main`.
+Assert that your Monitive monitor is healthy after every deployment to `main`.
 
 ## What it does
 
-After `./deploy.sh` runs, the [`uptimemonitoring/assert-healthy`](https://github.com/uptimemonitoring/assert-healthy) action polls your monitor and fails the workflow if it is down, preventing a broken deploy from going undetected.
+After `./deploy.sh` runs, the [`monitive/assert-healthy`](https://github.com/monitive/assert-healthy) action polls your monitor and fails the workflow if it is down, preventing a broken deploy from going undetected.
 
 ## Files
 
@@ -25,8 +25,8 @@ In your repository: **Settings → Secrets and variables → Actions**
 
 | Type | Name | Value |
 |------|------|-------|
-| Secret | `UPTIMEMONITORING_ASSERT_HEALTHY_KEY` | Your UptimeMonitoring API key (`umk_live_…`) |
-| Variable | `UPTIMEMONITORING_MONITOR_ID` | Your monitor's numeric ID (find it in the dashboard URL) |
+| Secret | `MONITIVE_API_KEY` | Your Monitive API key (`mk_live_…`) |
+| Variable | `MONITOR_ID` | Your monitor's numeric ID (find it in the dashboard URL) |
 
 ### 2. Copy the workflow
 
@@ -43,10 +43,10 @@ Replace the `./deploy.sh` step with your actual deployment command (e.g. `npm ru
 
 | Input | Description |
 |-------|-------------|
-| `api-key` | UptimeMonitoring API key with read access |
+| `api-key` | Monitive API key with read access |
 | `monitor-ids` | Comma- or newline-separated monitor IDs to assert |
 
-See the [assert-healthy action](https://github.com/uptimemonitoring/assert-healthy) for all available inputs (`strict-flapping`, `unknown-retry-delay-seconds`, etc.).
+See the [assert-healthy action](https://github.com/monitive/assert-healthy) for all available inputs (`strict-flapping`, `unknown-retry-delay-seconds`, etc.).
 
 ## Next steps
 

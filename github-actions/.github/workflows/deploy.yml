@@ -14,7 +14,7 @@ jobs:
         run: ./deploy.sh
 
       - name: Assert monitor healthy
-        uses: uptimemonitoring/assert-healthy@v1
+        uses: monitive/assert-healthy@v1
         with:
-          api-key: ${{ secrets.UPTIMEMONITORING_ASSERT_HEALTHY_KEY }}
-          monitor-ids: ${{ vars.UPTIMEMONITORING_MONITOR_ID }}
+          api-key: ${{ secrets.MONITIVE_API_KEY }}
+          monitor-ids: ${{ vars.MONITOR_ID }}

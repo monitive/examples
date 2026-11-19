@@ -5,7 +5,7 @@ Run the full monitor lifecycle — create, list, fetch state, test, delete — u
 ## Prerequisites
 
 - Python 3.8 or later (`python --version`)
-- An [UptimeMonitoring API key](https://uptimemonitoring.com/settings/api-keys) (`umk_live_…` or `umk_test_…`)
+- A [Monitive API key](https://my.monitive.com/keys) (`mk_live_…`)
 
 ## Install dependencies
 
@@ -18,7 +18,7 @@ pip install -r requirements.txt
 ## How to run
 
 ```sh
-export UPTIMEMONITORING_API_KEY=umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export MONITIVE_API_KEY=mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 python quickstart.py
 ```
 

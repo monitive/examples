@@ -6,12 +6,12 @@ Run the full monitor lifecycle — create, list, fetch state, test, delete — f
 
 - `curl` 7.76 or later (`curl --version`)
 - `jq` (`jq --version`)
-- An [UptimeMonitoring API key](https://uptimemonitoring.com/settings/api-keys) (`umk_live_…` or `umk_test_…`)
+- A [Monitive API key](https://my.monitive.com/keys) (`mk_live_…`)
 
 ## How to run
 
 ```sh
-export UPTIMEMONITORING_API_KEY=umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+export MONITIVE_API_KEY=mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 chmod +x quickstart.sh
 ./quickstart.sh
 ```

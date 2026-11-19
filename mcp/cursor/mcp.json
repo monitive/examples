@@ -1,9 +1,9 @@
 {
   "mcpServers": {
-    "uptimemonitoring": {
-      "url": "https://api.uptimemonitoring.com/mcp",
+    "monitive": {
+      "url": "https://api.monitive.com/mcp",
       "headers": {
-        "Authorization": "Bearer umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        "Authorization": "Bearer mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
       }
     }
   }

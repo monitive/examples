@@ -1,6 +1,6 @@
-# UptimeMonitoring Examples
+# Monitive Examples
 
-Copy-paste-runnable examples for every [UptimeMonitoring](https://uptimemonitoring.com) integration.
+Copy-paste-runnable examples for every [Monitive](https://monitive.com) integration.
 
 ## Integrations
 
@@ -9,7 +9,7 @@ Copy-paste-runnable examples for every [UptimeMonitoring](https://uptimemonitori
 | cURL | [curl/](curl/) | Create, list, test, and delete monitors from the command line |
 | Node.js | [node/](node/) | Same lifecycle using Node 20+ native fetch, no dependencies |
 | Python | [python/](python/) | Same lifecycle using `requests` |
-| GitHub Actions | [github-actions/](github-actions/) | Post-deploy health gate with `uptimemonitoring/assert-healthy` |
+| GitHub Actions | [github-actions/](github-actions/) | Post-deploy health gate with `monitive/assert-healthy` |
 | MCP — Claude Code | [mcp/claude-code/](mcp/claude-code/) | Manage monitors with natural language in Claude Code |
 | MCP — Cursor | [mcp/cursor/](mcp/cursor/) | Manage monitors with natural language in Cursor |
 | Webhooks | [webhooks/](webhooks/) | Push notifications when a monitor goes down, recovers, or flaps |
@@ -20,8 +20,8 @@ All examples use placeholders — replace them with your own values before runni
 
 | Placeholder | Replace with |
 |-------------|--------------|
-| `UPTIMEMONITORING_API_KEY` | Your API key — set as an environment variable, never hardcode it |
-| `umk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` | Your actual API key from [Settings → API Keys](https://uptimemonitoring.com/settings/api-keys) |
+| `MONITIVE_API_KEY` | Your API key — set as an environment variable, never hardcode it |
+| `mk_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` | Your actual API key from [API keys](https://my.monitive.com/keys) |
 | `123` | Your monitor's numeric ID (visible in the dashboard URL) |
 | `whs_live_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx` | The HMAC signing secret returned when you set a webhook |
 
